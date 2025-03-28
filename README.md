@@ -1,54 +1,36 @@
-# React + TypeScript + Vite
+# 📌 News CRUD App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Этот проект — часть портфолио. Приложение позволяет добавлять, редактировать и удалять новости. Все данные хранятся в `localStorage`, что обеспечивает их сохранение между сессиями пользователя. Интерфейс адаптирован под мобильные устройства.
 
-Currently, two official plugins are available:
+## 🚀 Технологии
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Vite** — Быстрая сборка проекта
+- **React + TypeScript** — Основной стек
+- **React Router** — Для навигации между страницами
+- **Tailwind CSS** — Для стилизации
+- **localStorage** — Для хранения данных
 
-## Expanding the ESLint configuration
+## 📦 Установка и запуск
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. **Клонируйте репозиторий**
+   ```sh
+   git clone https://github.com/Romsickkk/SEOTLT-Portfolio.git
+   cd news-crud-app
+   ```
+2. **Установите зависимости**
+   ```sh
+   npm install
+   ```
+3. **Запустите приложение**
+   ```sh
+   npm run dev
+   ```
+4. Откройте `http://localhost:5173/`
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 🔥 Функционал
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- Просмотр списка новостей
+- Добавление новых новостей
+- Редактирование существующих новостей
+- Удаление новостей
+- Сохранение данных в `localStorage`
